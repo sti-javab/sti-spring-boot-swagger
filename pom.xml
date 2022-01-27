@@ -22,6 +22,8 @@
         <maven.plugin.plugin.version>3.2</maven.plugin.plugin.version>
         <maven.resources.plugin.version>3.0.1</maven.resources.plugin.version>
 
+        <guava.version>20.0</guava.version>
+        <jackson.version>2.13.1</jackson.version>
         <junit.version>4.13.1</junit.version>
         <mysql.version>8.0.28</mysql.version>
         <project.version>1.0-SNAPSHOT</project.version>
@@ -36,6 +38,23 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}}</version>
+            </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
