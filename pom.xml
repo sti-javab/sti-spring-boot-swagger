@@ -25,7 +25,7 @@
         <junit.version>4.13.1</junit.version>
         <mysql.version>8.0.28</mysql.version>
         <project.version>1.0-SNAPSHOT</project.version>
-        <spring.boot.version>2.6.3</spring.boot.version>
+        <spring.boot.version>2.5.7</spring.boot.version>
         <spring.version>5.3.15</spring.version>
         <springfox.version>3.0.0</springfox.version>
     </properties>
@@ -55,6 +55,11 @@
                 <version>${springfox.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
