@@ -1,4 +1,5 @@
 sti\spring\boot\swagger\endpoint\rest\RestService.class
+sti\spring\boot\swagger\endpoint\domain\Student$Builder.class
 sti\spring\boot\swagger\endpoint\SwaggerConfiguration.class
 sti\spring\boot\swagger\endpoint\domain\Student.class
 sti\spring\boot\swagger\endpoint\Swagger.class

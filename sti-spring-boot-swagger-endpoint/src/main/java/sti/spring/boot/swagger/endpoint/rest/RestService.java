@@ -1,17 +1,20 @@
 package sti.spring.boot.swagger.endpoint.rest;
 
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import sti.spring.boot.swagger.endpoint.domain.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/service")
 public class RestService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(RestService.class);
 
     private static List<Student> students;
 
@@ -19,7 +22,13 @@ public class RestService {
         students = Arrays.asList(
                 new Student("Nasir", "Tedros"),
                 new Student ("Oskar", "Wadin"),
-                new Student("Luliya", "Masfun"));
+                new Student("Luliya", "Masfun")
+        /*        Student.builder()
+                        .withGivenName("Max")
+                        .withSurname("Lundin")
+                        .build()*/
+        );
+        LOGGER.info("RestService created");
     }
 
     @GetMapping(("/getstudentnames"))

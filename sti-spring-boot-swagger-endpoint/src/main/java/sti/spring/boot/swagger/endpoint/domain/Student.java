@@ -13,6 +13,11 @@ public class Student {
         this.surName = Objects.requireNonNull(surName);
     }
 
+    public Student(Builder builder){
+        this.givenName = builder.givenName;
+        this.surName = builder.surName;
+    }
+
     public String getGivenName() {
         return givenName;
     }
@@ -34,4 +39,27 @@ public class Student {
         return givenName + " " + surName;
     }
 
+    public static Builder builder(){ return new Builder();}
+
+    //nested class / nästlad klass / inner class /inre klass
+    public static class Builder {
+
+        private String givenName;
+
+        private String surName;
+
+        public Builder withGivenName(String givenName) {
+            this.givenName = givenName;
+            return this;
+        }
+
+        public Builder withSurname(String surname) {
+            this.givenName = surname;
+            return this;
+        }
+
+        public Student build() {
+            return new Student(this.givenName, this.surName);
+        }
+    }
 }
